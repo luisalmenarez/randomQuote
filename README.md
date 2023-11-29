@@ -1,8 +1,30 @@
-# React + Vite
+# RandomQuote
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+¡Bienvenido a RandomQuote! 🚀
 
-Currently, two official plugins are available:
+## Tecnologías Utilizadas
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![HTML](https://img.shields.io/badge/-HTML-ff4500?style=flat&logo=html5&logoColor=white)
+![Tailwind CSS Badge](https://img.shields.io/badge/-Tailwind_CSS-38B2AC?style=flat&logo=tailwind-css&logoColor=white)
+![JavaScript](https://img.shields.io/badge/-JavaScript-F7DF1E?style=flat&logo=javascript&logoColor=black)
+![React Badge](https://img.shields.io/badge/-React-61DAFB?style=flat&logo=react&logoColor=white)
+
+## Descripción
+
+RandomQuote es mi proyecto personal de gestión de citas construido con React. En esta aplicación, puedes explorar citas aleatorias usando la API de Breaking Bad.
+
+## Características
+
+- Interfaz Intuitiva: Un diseño fácil de usar para una experiencia de usuario fluida.
+
+- Tecnologías Modernas: Utiliza tecnologías actuales como React para un desarrollo eficiente.
+
+Puedes probar la aplicación [aquí](https://sparkquote.netlify.app/).
+
+![Captura de pantalla de la aplicación](./public/RandomQuote.png)
+
+## Contacto
+
+- [Twitter](https://twitter.com/_luisalmenarez)
+- [Instagram](https://www.instagram.com/_luisalmenarez/)
+- [LinkedIn](https://www.linkedin.com/in/luisalmenarez/)
