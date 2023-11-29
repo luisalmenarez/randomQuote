@@ -7,6 +7,7 @@ export const useFetch = (url) => {
     data: null, // Aquí se almacenarán los datos de la respuesta.
     isLoading: true, // Indica si la solicitud está en curso.
     hasError: null, // Almacenará un posible error en la solicitud.
+    fetchData: null,
   });
 
   // Función para realizar la solicitud fetch.
