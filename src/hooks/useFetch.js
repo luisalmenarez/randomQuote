@@ -18,7 +18,7 @@ export const useFetch = (url) => {
       isLoading: true,
     });
 
-    await new Promise((resolve) => setTimeout(resolve, 1000));
+    await new Promise((resolve) => setTimeout(resolve, 500));
 
     // Realizamos la solicitud fetch a la URL proporcionada.
     const response = await fetch(url);

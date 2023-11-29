@@ -1,6 +1,5 @@
-import { useCounter } from "../hooks/useCounter";
-import { useFetch } from "../hooks/useFetch";
 import { PuffLoader } from "react-spinners";
+import { useCounter, useFetch } from "../hooks";
 
 // Este componente utiliza el hook personalizado useFetch para obtener citas de Breaking Bad.
 export const QuoteContainer = () => {
@@ -18,10 +17,6 @@ export const QuoteContainer = () => {
 
   //   console.log({ data, isLoading, hasError });
 
-  const onUpdateQuote = () => {
-    increment();
-  };
-
   // Renderizamos el componente.
   return (
     <section className="w-4/5 grid place-items-center">
@@ -38,12 +33,13 @@ export const QuoteContainer = () => {
         <blockquote className="border-gray-500 pl-4 text-center m-4 p-4">
           <p className="italic p-2 md:text-2xl">{quote}</p>
           <footer className="text-gray-600 text-xs md:text-2xl text-right">
-            {author}
+            - {author}
           </footer>
         </blockquote>
       )}
       <button
-        onClick={onUpdateQuote}
+        onClick={() => increment()}
+        disabled={isLoading}
         className="font-bold transition-all duration-200 hover:underline hover:text-indigo-600">
         Next Quote
       </button>
