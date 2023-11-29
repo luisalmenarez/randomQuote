@@ -1,21 +1,21 @@
-import { PuffLoader } from "react-spinners";
 import { useCounter, useFetch } from "../hooks";
+import { Button, Loading, QuoteComponent } from "../Components";
 
 // Este componente utiliza el hook personalizado useFetch para obtener citas de Breaking Bad.
 export const QuoteContainer = () => {
-  /* const url = "https://api.quotable.io/random"; */
-
   const { counter, increment } = useCounter();
 
   // Utilizamos el hook useFetch para obtener datos, estado de carga y posibles errores.
-  const { data, isLoading, hasError } = useFetch(
+  const { data, isLoading } = useFetch(
     `https://api.breakingbadquotes.xyz/v1/quotes/${counter}`
   );
 
+  const onChangeQuote = () => {
+    increment();
+  };
+
   // Desestructuramos los datos para obtener el autor y la cita de la primera posición del array.
   const { author, quote } = !!data && data[0];
-
-  //   console.log({ data, isLoading, hasError });
 
   // Renderizamos el componente.
   return (
@@ -24,25 +24,11 @@ export const QuoteContainer = () => {
         Random Quotes
       </h2>
       {isLoading ? (
-        // Muestra un mensaje de carga mientras los datos se están recuperando.
-        <div className="p-10">
-          <PuffLoader size={150} color="#4f46e5" />
-        </div>
+        <Loading />
       ) : (
-        // Muestra la cita y el autor cuando los datos han sido cargados.
-        <blockquote className="border-gray-500 pl-4 text-center m-4 p-4">
-          <p className="italic p-2 md:text-2xl">{quote}</p>
-          <footer className="text-gray-600 text-xs md:text-2xl text-right">
-            - {author}
-          </footer>
-        </blockquote>
+        <QuoteComponent author={author} quote={quote} />
       )}
-      <button
-        onClick={() => increment()}
-        disabled={isLoading}
-        className="font-bold transition-all duration-200 hover:underline hover:text-indigo-600">
-        Next Quote
-      </button>
+      <Button func={onChangeQuote} />
     </section>
   );
 };

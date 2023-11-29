@@ -1,4 +1,4 @@
-import { QuoteContainer } from "./Components/QuoteContainer";
+import { QuoteContainer } from "./Components";
 
 export const QuoteApp = () => {
   return (
