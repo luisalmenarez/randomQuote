@@ -1,6 +1,6 @@
 # RandomQuote!
 
-¡Bienvenido a RandomQuote! 🚀
+¡RandomQuote! 🚀
 
 ## Tecnologías Utilizadas
 
